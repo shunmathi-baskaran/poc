@@ -37,13 +37,23 @@ const accounts = [{
     accountNumber: '189873123456789',
     accountType: 'Savings',
     ifscCode: 'IFSC001',
-    branchName: 'Pune'
+    branchName: 'Pune',
+    balance: 21000
+},
+{
+    customerId: 1000000,
+    accountNumber: '18987312389645',
+    accountType: 'Current',
+    ifscCode: 'IFSC001',
+    branchName: 'Pune',
+    balance: 2300
 },{
     customerId: 1000001,
     accountNumber: '157289399978654',
     accountType: 'Savings',
     ifscCode: 'IFSC001',
-    branchName: 'Pune'
+    branchName: 'Pune',
+    balance: 15000
 }]
 
 const customerData = [
