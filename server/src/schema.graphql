@@ -1,6 +1,5 @@
 type Query {
-  login(username: String!, password: String!): Customer
-  getAccounts(customerId: ID!): [Account]
+  getCustomerInfo(username: String!, password: String!): Customer
   getTransactions(accountNumber: String!): [Transaction]
 }
 
@@ -9,6 +8,7 @@ type Customer {
   username: String
   email: String
   phoneNumber: String
+  accounts: [Account]
 }
 
 type Account {
