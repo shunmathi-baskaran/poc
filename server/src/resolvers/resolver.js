@@ -2,8 +2,8 @@ import {customerData, accounts, transactions} from './data'
 
 const resolvers = {
     Query: {
-        getCustomerInfo: ( _ ,{username, password}) => {
-             let customerInfo = customerData.find((customer) => customer.username === username);
+        getCustomerInfo: ( _ ,{email, password}) => {
+             let customerInfo = customerData.find((customer) => customer.email === email);
             if(customerInfo) {
                 if(customerInfo.password === password) {
                     return customerInfo
