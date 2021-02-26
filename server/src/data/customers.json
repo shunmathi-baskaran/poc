@@ -1,0 +1,16 @@
+[
+    {
+       "customerId":1000000,
+       "username":"Anshul",
+       "password":"abcd",
+       "email":"anshula128@gmail.com",
+       "phoneNumber":"9876543212"
+    },
+    {
+       "customerId":1000001,
+       "username":"John",
+       "password":"xyz",
+       "email":"john@gmail.com",
+       "phoneNumber":"9787644674"
+    }
+ ]

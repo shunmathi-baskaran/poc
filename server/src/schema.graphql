@@ -4,6 +4,10 @@ type Query {
   getTransactions(accountNumber: String!): [Transaction]
 }
 
+type Mutation {
+  updatePhoneno(customerId: ID!, phoneNumber: String!): Customer
+}
+
 type Customer {
   customerId: ID
   username: String

@@ -1,0 +1,34 @@
+[
+   {
+      "accountNumber":"189873123456789",
+      "id":1000000001,
+      "date":"27-01-20",
+      "narration":"atm",
+      "type":"dbt",
+      "amount":5000
+   },
+   {
+      "accountNumber":"189873123456789",
+      "id":1000000002,
+      "date":"29-01-20",
+      "narration":"upi",
+      "type":"crt",
+      "amount":2000
+   },
+   {
+      "accountNumber":"157289399978654",
+      "id":1000000001,
+      "date":"16-01-20",
+      "narration":"atm",
+      "type":"dbt",
+      "amount":3000
+   },
+   {
+      "accountNumber":"157289399978654",
+      "id":1000000002,
+      "date":"01-02-20",
+      "narration":"upi",
+      "type":"crt",
+      "amount":6000
+   }
+]

@@ -11,7 +11,8 @@
     "fs": "0.0.1-security",
     "graphql": "^15.5.0",
     "graphql-iso-date": "^3.6.1",
-    "graphql-tools": "^7.0.2"
+    "graphql-tools": "^7.0.2",
+    "mongoose": "^5.11.16"
   },
   "devDependencies": {
     "@babel/cli": "^7.12.10",
