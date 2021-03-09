@@ -1,21 +1,21 @@
-import accounts from "../models/accounts";
-import customers from "../models/customers";
-import transactions from "../models/transactions";
+import Accounts from "../models/accounts";
+import Customers from "../models/customers";
+import Transactions from "../models/transactions";
 
 const resolvers = {
   Query: {
     getCustomerInfo: async (_, { email, password }) => {
-      let customerInfo = await customers.findOne({ email, password });
+      const customerInfo = await Customers.findOne({ email, password });
       return customerInfo;
     },
     getAccounts: async (_, { customerId }) => {
-      let accountsInfo = await accounts.find({ customerId });
+      const accountsInfo = await Accounts.find({ customerId });
       if (accountsInfo.length > 0) {
         return accountsInfo;
       }
     },
     getTransactions: async (_, { accountNumber }) => {
-      let transactionsInfo = await transactions.find({ accountNumber });
+      const transactionsInfo = await Transactions.find({ accountNumber });
       if (transactionsInfo.length > 0) {
         return transactionsInfo;
       }
@@ -24,13 +24,18 @@ const resolvers = {
 
   Mutation: {
     updatePhoneno: async (_, { customerId, phoneNumber }) => {
-      let updatedCustomerInfo = await customers.findOneAndUpdate(
+      const updatedCustomerInfo = await Customers.findOneAndUpdate(
         { customerId },
         { $set: { phoneNumber } },
         { new: true }
       );
       return updatedCustomerInfo;
     },
+    addTransaction: async (_, { input }) =>{
+      const transactionDoc = new Transactions(input)
+      const newTransaction = await transactionDoc.save()
+      return newTransaction;
+    }
   },
 };
 

@@ -6,6 +6,7 @@ type Query {
 
 type Mutation {
   updatePhoneno(customerId: ID!, phoneNumber: String!): Customer
+  addTransaction(input: TransactionInput): Transaction
 }
 
 type Customer {
@@ -26,11 +27,19 @@ type Account {
 
 type Transaction {
   accountNumber: String
-  id: ID!
+  _id: ID!
   date: Date
   narration: NarrationType
   type: TransactionType
   amount: Float
+}
+
+input TransactionInput {
+  accountNumber: String
+  date: String
+  narration: NarrationType
+  type: TransactionType
+  amount: String
 }
 
 enum AccountType {
